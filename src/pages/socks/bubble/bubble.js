@@ -37,7 +37,8 @@ export default function define(runtime, observer) {
                     .style("border", "solid")
                     .style("border-radius", ".5rem")
                     .style("padding", ".75rem")
-                    .html(d.wallet);
+                    .text(root, d => d.data.wallet) // trying to get it to display some text!!
+                    // .html("Wallet Address: " + d.wallet + "<br>" + "Token Balance: " + d.value + "<br>" + "Initial Transaction Date: " + d.buydate+ "<br>" + "Last Transaction Date: " + d.lastdate)
             }
             var hideTooltip = function(d) {
                 tooltip

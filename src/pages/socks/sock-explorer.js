@@ -1,7 +1,6 @@
 import {Runtime, Inspector} from '@observablehq/runtime';
 import React, {useEffect, useRef} from 'react';
 import notebook from './bubble';
-import NavigationSml from "../../components/navigationSml";
 
 export default function SockExplorer() {
     const ref = useRef();
@@ -17,7 +16,8 @@ export default function SockExplorer() {
     }, []);
 
     return (
-        <main className={"ecosystem"} >
+        <main className={"ecosystem"}>
+            <div className={"wallet-info"}></div>
             <div ref={ref}/>
         </main>
     );

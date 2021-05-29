@@ -9,7 +9,6 @@ export const Router = () => {
     return (
         <Routes>
             <Route path="/" element={<Main/>}/>
-            <Route path="/socks" element={<SockExplorer/>}/>
             <Route path="/terms" element={<Terms/>}/>
         </Routes>
     );

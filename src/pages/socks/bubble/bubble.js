@@ -3,13 +3,15 @@ export default function define(runtime, observer) {
     const fileAttachments = new Map([["socks-holders.json","/socks-holders.json"]]);
     main.builtin("FileAttachment", runtime.fileAttachments(name => fileAttachments.get(name)));
     main.variable(observer()).define(["md"], function(md){return(
-        md`# Unisocks holders`
+        md`SOCK explorer`
     )});
-    main.variable(observer("chart")).define("chart", ["pack","data","d3","width","height","DOM","color","invalidation"], function(pack,data,d3,width,height,DOM,color,invalidation)
-        {
-            const root = pack(data);
+    main.variable(observer("chart"))
+        .define("chart", ["pack","data","d3","width","height","DOM","color","invalidation"],
+            function(pack,data,d3,width,height,DOM,color,invalidation) {
 
-            // defaults = 0.01, 0.8, 0.5
+            const root = pack(data);
+            root.each((d) => (d.current = d));
+
             const s1 = 0.001
             const s2 = 0.9
             const s3 = 0.8
@@ -20,47 +22,25 @@ export default function define(runtime, observer) {
                 .force("x", d3.forceX(width / 2).strength(s1))
                 .force("y", d3.forceY(height / 2).strength(s1))
                 .force('charge', d3.forceManyBody().strength(s2))
-                .force(
-                    "collision",
-                    d3
-                        .forceCollide()
-                        .radius(function(d) {
-                            return d.r + 0.1;
-                        })
-                        .strength(s3)
-                )
-            ;
+                .force("collision", d3.forceCollide().radius(function(d) {return d.r + 0.1;}).strength(s3));
+
+            var tooltip = d3.select(".wallet-info")
+                .append("div")
+                .style("opacity", 0)
+                .style("color", "black");
 
 
-            // create a tooltip
-            var Tooltip = d3.select("svg")
-                .append("g")
-                .style("opacity", 1) // set to 0
-                .attr("class", "tooltip")
-                .style("background-color", "pink")
-                .style("border", "solid")
-                .style("border-width", "2px")
-                .style("border-radius", "5px")
-                .style("padding", "5px");
-
-            // Three function that change the tooltip when user hover / move / leave a cell
-            var mouseover = function(d) {
-                Tooltip
+            var showTooltip = function(d) {
+                tooltip
                     .style("opacity", 1)
-
-                d3.select(this)
-                    .style("stroke", "pink")
-                    .style("stroke-width", 2)
-                    .style("opacity", 0.9)
+                    .style("background-color", "pink")
+                    .style("border", "solid")
+                    .style("border-radius", ".5rem")
+                    .style("padding", ".75rem")
+                    .html(d => d.data.wallet);
             }
-            var mousemove = function(d) {
-                Tooltip
-                    .html("The exact value of<br>this cell is: ")
-                    .style("left", (d3.mouse(this)[0]+10) + "px")
-                    .style("top", (d3.mouse(this)[1]) + "px")
-            }
-            var mouseleave = function(d) {
-                Tooltip
+            var hideTooltip = function(d) {
+                tooltip
                     .style("opacity", 0)
 
                 d3.select(this)
@@ -94,38 +74,10 @@ export default function define(runtime, observer) {
                 .attr("stroke-width", 0.1)
                 .attr("fill-opacity", 1)
                 .attr("fill", d => color(d.value))
-                .on("mouseover", mouseover)
-                .on("mousemove", mouseover)
-                .on("mouseleave", mouseleave)
-                .on('click', function(d) {
-                    console.log('open tab')
-                    window.open(
-                        d.data.etherscan,
-                        '_blank' // <- This is what makes it open in a new window.
-                    )
-                });
-
-
-
-
-
-            // leaf.append("clipPath")
-            //     .attr("id", d => (d.etherscan = DOM.uid("clip")).id)
-            //   .append("use")
-            //     .attr("xlink:href", d => d.etherscan.href);
-
-            // leaf.append("text")
-            //     .attr("clip-path", d => d.clipUid)
-            //   .selectAll("tspan")
-            //   .data(d => d.data.wallet.split(/(?=[A-Z][a-z])|\s+/g))
-            //   .join("tspan")
-            //     .attr("x", 0)
-            //     .attr("y", (d, i, nodes) => (d, i, nodes))
-            //     .text(d => d);
-
-            // leaf.append("title")
-            //     .text(d => `${d.data.title === undefined ? "" : `${d.data.title} `}${(d.data.wallet.split(/(?=[A-Z][a-z])|\s+/g))}`);
-
+                .attr("xlink:href",  function(d) { return d.url;})
+                .on("mouseover", showTooltip)
+                .on("mouseleave", hideTooltip)
+                .on('click', function(d) {(window.open(d.url, '_blank'))})
 
             simulation.on("tick", () => {
                 console.log(root.leaves());
@@ -136,7 +88,6 @@ export default function define(runtime, observer) {
                 .extent([[0, 0], [width, height]])
                 .scaleExtent([1, 50])
                 .on("zoom", zoomed));
-
 
             invalidation.then(() => simulation.stop());
 

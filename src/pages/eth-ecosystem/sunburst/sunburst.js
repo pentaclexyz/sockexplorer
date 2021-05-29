@@ -2,7 +2,10 @@ export default function define(runtime, observer) {
     const main = runtime.module();
     const fileAttachments = new Map([["eth-ecosystem.json", "/eth-ecosystem.json"]]);
     main.builtin("FileAttachment", runtime.fileAttachments(name => fileAttachments.get(name)));
-    main.variable(observer("chart")).define("chart", ["partition", "data", "d3", "width", "color", "arc", "format", "radius"], function (partition, data, d3, width, color, arc, format, radius) {
+    main.variable(observer("chart"))
+        .define("chart", ["partition", "data", "d3", "width", "color", "arc", "format", "radius"],
+            function (partition, data, d3, width, color, arc, format, radius) {
+
             const root = partition(data);
             root.each(d => d.current = d);
 
@@ -46,14 +49,6 @@ export default function define(runtime, observer) {
                 .attr("dy", "0.35em")
                 .attr("fill-opacity", d => +labelVisible(d.current))
                 .attr("transform", d => labelTransform(d.current))
-
-            const circle = label.append("svg")
-                .attr("r", 15 );
-
-            circle.append("image")
-                .attr("xlink:href",  function(d) { return d.data.img;})
-                .attr("height", 15)
-                .attr("width", 15);
 
             label.append('a')
                 .attr("pointer-events", "all")

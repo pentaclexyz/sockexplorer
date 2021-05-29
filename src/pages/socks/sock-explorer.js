@@ -17,7 +17,7 @@ export default function SockExplorer() {
 
     return (
         <main className={"ecosystem"}>
-            <div className={"wallet-info"}></div>
+            <div className={"tooltip"}></div>
             <div ref={ref}/>
         </main>
     );

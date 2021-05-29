@@ -26,45 +26,10 @@ export default function define(runtime, observer) {
                     .force('y', d3.forceY(height / 2).strength(forceStrength).y(centre.y))
                     .force('collision', d3.forceCollide().radius(d => d.radius + 0.1).strength(strength_var_2));
 
-                const tooltip = d3.select(".wallet-info")
-                    .style("opacity", 0)
-                    .attr("class", "tooltip")
-                    .text("wallet")
-
-                .on('mousemove', e => tooltip.style('top', `${e.pageY}px`)
-                        .style('left', `${e.pageX + 10}px`))
-
-                const showTooltip = function(d) {
-                    tooltip
-                        .style("opacity", 1)
-                        .style("background-color", "pink")
-                        .style("border", "solid")
-                        .style("border-radius", ".5rem")
-                        .style("padding", ".75rem")
-                        .text(d => d.data.wallet)
-                        // .html("Wallet Address: " + d.wallet + "<br>" + "Token Balance: " + d.value + "<br>" + "Initial Transaction Date: " + d.buydate+ "<br>" + "Last Transaction Date: " + d.lastdate)
-
-                    ;
-
-                }
-
-                const hideTooltip = function (d) {
-                    tooltip
-                        .style("opacity", 0)
-
-                    d3.select(this)
-                        .style("stroke", "none")
-                        .style("opacity", 1)
-                }
-
                 const svg = d3.create("svg")
                     .attr("viewBox", [0, 0, width, height])
+                    .style("font-size", ".6rem")
                     .attr("text-anchor", "middle");
-
-                // svg.append("rect")
-                //     .attr("width", "100%")
-                //     .attr("height", "100%")
-                //     .attr("fill", "#1c252c");
 
                 const g = svg.append("g");
 
@@ -73,16 +38,31 @@ export default function define(runtime, observer) {
                     .join("g")
                       .attr("transform", d => `translate(${d.x + 1},${d.y + 1})`);
 
+                const tooltip = d3.select('.tooltip');
+
                 leaf.append("circle")
                     .attr("id", d => (d.leafUid = DOM.uid("leaf")).id)
                     .attr("r", d => d.r)
                     .attr("fill-opacity", 1)
                     .attr("fill", d => color(d.value))
-                    .on("mouseover", showTooltip)
-                    .on("mouseleave", hideTooltip)
-                    .on('click', function (d) {
-                        (window.open(d.data.url, '_blank'))
+                    .on('mouseover', function (e, d) {
+                        tooltip.select('a').attr('href', d.data.url).text(d.data.url);
+                        tooltip.select('span').attr('class', d.data.category).text(d.data.category);
+                        tooltip.style('visibility', 'visible');
+
+                        d3.select(this).style('stroke', '#222')
+                        .attr("fill-opacity", .7);
                     })
+                    .on('mousemove', e => tooltip.style('top', `${e.pageY}px`)
+                        .style('left', `${e.pageX + 10}px`))
+
+                    .on('mouseout', function () {
+                        d3.select(this).style('stroke', 'none')
+                       .attr("fill-opacity", 1);
+                        return tooltip.style('visibility', 'hidden');
+                    })
+
+                    .on('click', (e, d) => window.open(d.data.url));
 
                 leaf.append("clipPath")
                     .attr("id", d => (d.clipUid = DOM.uid("clip")).id)
@@ -95,7 +75,8 @@ export default function define(runtime, observer) {
                     .join("tspan");
 
                 leaf.append("title")
-                    .text(d => `${d.data.wallet}`);
+                    // .text(d => `${d.data.wallet}`);
+                    .text(d => `${d.data.value}`);
 
                 simulation.on("tick", () => {
                     console.log(root.leaves());

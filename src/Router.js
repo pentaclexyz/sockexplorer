@@ -3,7 +3,6 @@ import { Route, Routes } from "react-router";
 
 import {Terms} from "./pages/terms";
 import {Main} from "./pages/main";
-import SockExplorer from "./pages/socks/sock-explorer";
 
 export const Router = () => {
     return (

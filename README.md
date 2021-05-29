@@ -1,3 +1,31 @@
+# sockexplorer.com
+
+
+## Integrations
+
+
+ENS
+
+
+Fleek
+
+
+POAP
+
+
+## Content
+
+
+SOCKS historic timeline and links
+
+
+POAP visual idea
+
+
+
+## run
+
+
 $ yarn install
 
 $ yarn start

@@ -14,7 +14,7 @@ export default function define(runtime, observer) {
                 const centre = {x: width / 2, y: height / 2};
 
                 const root = pack(data);
-                root.each((d) => (d.current = d));
+                // root.each((d) => (d.current = d));
 
                 const forceStrength = 0.001;
                 const strength_var_1 = 0.5;
@@ -39,8 +39,8 @@ export default function define(runtime, observer) {
                         .style("border", "solid")
                         .style("border-radius", ".5rem")
                         .style("padding", ".75rem")
-                        .text(root, d => d.wallet) // trying to get it to display some text!!
-                    // .html("Wallet Address: " + d.wallet + "<br>" + "Token Balance: " + d.value + "<br>" + "Initial Transaction Date: " + d.buydate+ "<br>" + "Last Transaction Date: " + d.lastdate)
+                        // .text("wallet " + d.data.wallet)
+                        // .html("Wallet Address: " + d.data.wallet + "<br>" + "Token Balance: " + d.value + "<br>" + "Initial Transaction Date: " + d.buydate+ "<br>" + "Last Transaction Date: " + d.lastdate)
                 }
 
                 const hideTooltip = function (d) {
@@ -56,31 +56,27 @@ export default function define(runtime, observer) {
                     .attr("viewBox", [0, 0, width, height])
                     .attr("text-anchor", "middle");
 
-                svg.append("rect")
-                    .attr("width", "100%")
-                    .attr("height", "100%")
-                    .attr("fill", "#1c252c");
+                // svg.append("rect")
+                //     .attr("width", "100%")
+                //     .attr("height", "100%")
+                //     .attr("fill", "#1c252c");
 
                 const g = svg.append("g");
 
                 const leaf = g.selectAll('g')
                     .data(root.leaves())
                     .join("g")
-                    .attr("transform", d => `translate(${d.x + 1},${d.y + 1})`);
-
+                      .attr("transform", d => `translate(${d.x + 1},${d.y + 1})`);
 
                 leaf.append("circle")
-                    .attr("pointer-events", "all")
                     .attr("id", d => (d.leafUid = DOM.uid("leaf")).id)
                     .attr("r", d => d.r)
-                    .attr("stroke", "#1c252c")
-                    .attr("stroke-width", 0.1)
                     .attr("fill-opacity", 1)
                     .attr("fill", d => color(d.value))
                     .on("mouseover", showTooltip)
                     .on("mouseleave", hideTooltip)
                     .on('click', function (d) {
-                        (window.open(d.url, '_blank'))
+                        (window.open(d.data.url, '_blank'))
                     })
 
                 leaf.append("clipPath")
@@ -90,19 +86,15 @@ export default function define(runtime, observer) {
 
                 leaf.append("text")
                     .attr("clip-path", d => d.clipUid)
-                    // .selectAll("tspan")
-                    // .text(d => d.data.name)
-                    .join("tspan")
-                    .attr("x", 0)
-                    // .attr("y", (d, i, nodes) => `${i - nodes.length / 2 + 0.8}em`)
-                    .text(d => d);
+                    .text(d => `${d.data.wallet}`)
+                    .join("tspan");
 
                 leaf.append("title")
-                    .text(d => `${d.data.title}`);
+                    .text(d => `${d.data.wallet}`);
 
                 simulation.on("tick", () => {
                     console.log(root.leaves());
-                    // leaf.attr("transform", d => `translate(${d.x + 1},${d.y + 1})`);
+                    leaf.attr("transform", d => `translate(${d.x + 1},${d.y + 1})`);
                 });
 
                 svg.call(d3.zoom()

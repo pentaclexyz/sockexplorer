@@ -1,0 +1,4 @@
+.idea
+node_modules
+.pytest_cache/
+.DS_Store

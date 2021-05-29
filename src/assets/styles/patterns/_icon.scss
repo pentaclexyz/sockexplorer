@@ -1,0 +1,13 @@
+.icon {
+  font-family: _font(family-material);
+  font-size: 1.25rem;
+  color: _color(primary);
+
+  &.small {
+    font-size: .8rem;
+  }
+
+  &.unbounded {
+    //color: _color(primary);
+  }
+}

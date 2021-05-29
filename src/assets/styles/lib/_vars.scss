@@ -1,0 +1,33 @@
+$font-path: '../../fonts/';
+
+$font: (
+        family-default:	       ('SF Pro Text', -apple-system, BlinkMacSystemFont, 'Helvetica-neue', Helvetica, sans-serif),
+        //family-default:	       ('Shippori Mincho B1', serif),
+        family-body:	       ('SF Pro Text', -apple-system, BlinkMacSystemFont, 'Helvetica-neue', Helvetica, sans-serif),
+        family-light:	       ('fira-regular', arial, roboto, Helvetica, sans-serif),
+        family-regular:	       ('fira-regular', arial, roboto, Helvetica, sans-serif),
+        family-medium:	       ('fira-medium', arial, roboto, Helvetica, sans-serif),
+        family-semibold:       ('fira-semibold', arial, roboto, Helvetica, sans-serif),
+        family-bold:           ('fira-bold', arial, roboto, Helvetica, sans-serif),
+        family-material:       ('material-icons'),
+        size-small:            .6rem,
+        size-regular:          .75rem,
+);
+
+$size: (
+        regular:               .75rem,
+        default:               1rem,
+        medium:                1.25rem
+);
+
+$breakpoint: (
+        step-min:              320px,
+        step-one:              500px,
+        step-two:              800px,
+        step-three:            62rem,
+        step-max:              80rem
+);
+
+$width: (
+        readable-max:          35rem,
+);

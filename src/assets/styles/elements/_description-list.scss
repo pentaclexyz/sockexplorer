@@ -1,0 +1,20 @@
+dl {
+  font-size: _font(size-regular);
+  text-align: left;
+  display: flex;
+  padding-left: 1rem;
+
+  dt {
+    flex: 1;
+    text-align: right;
+    font-family: _font(family-bold);
+    color: _color(body-text);
+    display: inline-block;
+  }
+  dd {
+    flex: 1;
+    font-family: _font(family-light);
+    color: _color(body-text);
+    display: inline-block;
+  }
+}

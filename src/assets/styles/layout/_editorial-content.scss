@@ -1,0 +1,22 @@
+.editorial-content {
+  //width:100%;
+}
+
+@media only screen and (min-width: _breakpoint(step-two)) {
+  .editorial-content {
+
+    &.one-col {
+      margin: 0 auto;
+      width: 60%;
+    }
+
+    &.full-width {
+      max-width: 100%;
+      width: 100%;
+    }
+
+    p.feature {
+      font-size: 1rem;
+    }
+  }
+}

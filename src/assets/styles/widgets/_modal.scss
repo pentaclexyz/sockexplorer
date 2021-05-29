@@ -1,0 +1,9 @@
+.modal {
+  background-color: _color(modal-bg);
+  h2 {
+    color: _color(fancy);
+  }
+  p, div {
+    color: _color(modal-text);
+  }
+}

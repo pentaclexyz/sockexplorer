@@ -1,0 +1,373 @@
+{
+  "name": "ethereum",
+  "children": [
+    {
+      "name":  "Fiat on-ramps", "icon":  "",
+      "children": [
+        { "name": "Rainbow", "img": "https://pbs.twimg.com/profile_images/1230771588380782595/lC-xrjES.png", "url": "https://rainbow.me/", "value": 10},
+        { "name": "Binance", "img": "https://cryptologos.cc/logos/binance-coin-bnb-logo.png", "url": "https://www.binance.com/en/register?ref=VNP1A8SR", "value": 10},
+        { "name": "Coinbase", "img": "https://assets.coinbase.com/assets/coinbase.d491999a12d7c093ec6cd83ad64a1e23.png", "url": "https://www.coinbase.com/", "value": 10},
+        { "name": "FTX", "img": "https://i.imgur.com/yQDvfFn.png", "url": "https://ftx.com/#a=10575382", "value": 10},
+        { "name": "Gate io", "img": "https://www.gate.io/images/gateio.svg", "url": "https://www.gate.io/signup/3303835", "value": 10},
+        { "name": "Gemini", "img": "https://s2.coinmarketcap.com/static/img/coins/200x200/3306.png", "url": "https://gemini.com/share/86yng7t9", "value": 10},
+        { "name": "Moonpay", "img": "https://pbs.twimg.com/profile_images/1331730558146240514/-RZtxIFl_400x400.jpg", "url": "https://www.moonpay.com/", "value": 10},
+        { "name": "OKEx", "img": "https://upload.wikimedia.org/wikipedia/commons/8/89/Official_logo_of_OKEx.png", "url": "https://www.okex.com/join/4945328", "value": 10},
+        { "name": "OKCoin", "img": "https://i.pinimg.com/736x/80/9e/7d/809e7d9f8f2201646b11cc69c0c875c5.jpg", "value": 10, "children" : [
+          { "name": "OKCoin website", "img": "", "url": "https://www.okcoin.com/join?channelId=600054339", "value": 2},
+          { "name": "facebook", "img": "", "url": "https://facebook.com/OKCoinOfficial", "value": 2},
+          { "name": "instagram", "img": "", "url": "https://www.instagram.com/okcoinofficial/", "value": 2},
+          { "name": "telegram", "img": "", "url": "https://t.me/okcoin_en", "value": 2}
+        ]}
+      ]
+    },
+    {
+      "name":  "New token listings", "icon":  "",
+      "children": [
+        { "name": "Coinlist", "img": "", "url": "https://coinlist.co/clt?referral_code=YDMC3Y", "value": 20}
+      ]
+    },
+    {
+      "name": "Decentralised exchanges", "icon":  "",
+      "children": [
+        { "name": "Airswap", "img": "https://assets.coingecko.com/coins/images/1019/thumb/AST.png?1547034939", "url": "https://www.airswap.io/", "value": 10},
+        { "name": "Balancer", "img": "https://assets.coingecko.com/coins/images/11683/large/Balancer.png?1592792958", "url": "https://balancer.exchange/", "value": 10},
+        { "name": "Bancor", "img": "https://s2.coinmarketcap.com/static/img/coins/200x200/1727.png", "url": "https://app.bancor.network/", "value": 10},
+        { "name": "Kyber", "img": "https://cryptologos.cc/logos/kyber-network-knc-logo.png", "url": "https://kyber.network/", "value": 10},
+        { "name": "Loopring", "img": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xBBbbCA6A901c926F240b89EacB641d8Aec7AEafD/logo.png", "url": "https://loopring.io/#/", "value": 10},
+        { "name": "Matcha", "img": "https://dappimg.com/media/image/dapp/c1063804ac0547a698fc1aa29c01f9c0.blob", "url": "https://matcha.xyz/", "value": 10},
+        { "name": "Serum", "img": "https://projectserum.com/_next/static/images/logo-f7d8a0a5c95b089583c62c12db4dde50.png", "url": "https://dex.projectserum.com/", "value": 10 },
+        { "name": "Sushi", "img": "https://assets.coingecko.com/coins/images/12271/thumb/512x512_Logo_no_chop.png?1606986688", "url": "https://www.sushi.com/", "value": 10},
+        { "name": "dydx", "img": "", "url": "https://dydx.exchange/", "value": 10},
+        { "name": "1inch", "img": "https://assets.coingecko.com/coins/images/13469/thumb/1inch-token.png?1608803028", "url": "https://1inch.exchange/#/", "value": 10},
+        { "name": "Uniswap", "img": "https://ipfs.io/ipfs/QmXttGpZrECX5qCyXbBQiqgQNytVGeZW5Anewvh2jc4psg", "url": "https://app.uniswap.org/", "value": 10}
+      ]
+    },
+    {
+      "name": "Identity", "icon":  "",
+      "children": [
+        { "name": "Bright id", "img": "https://pbs.twimg.com/profile_images/1204130517253160960/Yu5Aw2Co.jpg", "url": "https://www.brightid.org/", "value": 10},
+        { "name": "Serto", "img": "https://uploads-ssl.webflow.com/5d8bc34a60283f28948dd30d/5fda7f13fcbea0dbff13f8a9_New%20serto%20logo%20blurple.svg", "url": "https://www.serto.id/", "value": 10}
+      ]
+    },
+    {
+      "name": "ETH infrastructure", "icon":  "",
+      "children": [
+        { "name": "AMP", "img": "https://assets.coingecko.com/coins/images/12409/large/amp-200x200.png?1599625397", "url": "https://amptoken.org/", "value": 10},
+        { "name": "Aragon", "img": "https://s2.coinmarketcap.com/static/img/coins/200x200/1680.png", "url": "https://aragon.org/", "value": 10},
+        { "name": "Arbitrum", "img": "https://portal.arbitrum.io/assets/arbitrum_logo.png", "url": "https://arbitrum.io/", "value": 10},
+        { "name": "Chainlink", "img": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x514910771AF9Ca656af840dff83E8264EcF986CA/logo.png", "url": "https://chain.link/", "value": 10},
+        { "name": "Consensys", "img": "https://miro.medium.com/max/3150/1*HWsBYAT2n833Op1P3T_Osw.png", "url": "https://consensys.net/", "value": 10},
+        { "name": "Bison Trails", "img": "https://bisontrails.co/images/assets/brand-assets-2020/lockup/bison-trails-lockup-blue-transparent.png", "url": "https://bisontrails.co/", "value": 10},
+        { "name": "Ethereum", "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Ethereum-icon-purple.svg/1200px-Ethereum-icon-purple.svg.png", "url": "https://ethereum.org/en/", "value": 10},
+        { "name": "Nucypher", "img": "https://assets.coingecko.com/coins/images/3318/thumb/photo1198982838879365035.jpg?1547037916", "url": "https://www.nucypher.com/", "value": 10},
+        { "name": "Get block", "img": "https://res.cloudinary.com/practicaldev/image/fetch/s--w47F9dJZ--/c_fill,f_auto,fl_progressive,h_320,q_auto,w_320/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/488641/e44bcbd3-4b23-4235-98c0-0771a1e54ecc.png", "url": "https://getblock.io/", "value": 10},
+        { "name": "Loom", "img": "https://cdn-images-1.medium.com/max/1200/1*K76UVoLq-FOL7l-_Fag-Qw@2x.png", "url": "https://loomx.io/", "value": 10},
+        { "name": "Polygon", "img": "https://cryptologos.cc/logos/polygon-matic-logo.png", "url": "https://polygon.technology/", "value": 10},
+        { "name": "Ren", "img": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x408e41876cCCDC0F92210600ef50372656052a38/logo.png", "url": "https://renproject.io/", "value": 10},
+        { "name": "Ramp", "img": "https://s2.coinmarketcap.com/static/img/coins/200x200/7463.png", "url": "https://ramp.network/", "value": 10},
+        { "name": "Synthetix", "img": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xC011a73ee8576Fb46F5E1c5751cA3B9Fe0af2a6F/logo.png", "url": "https://synthetix.io/", "value": 10},
+        { "name": "UMA", "img": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x04Fa0d235C4abf4BcF4787aF4CF447DE572eF828/logo.png", "url": "https://umaproject.org/", "value": 10},
+        { "name": "Wallet connect", "img": "https://walletconnect.org/walletconnect-logo.svg", "url": "https://walletconnect.org/", "value": 10}
+      ]
+    },
+    {
+      "name": "Dev tools", "icon":  "",
+      "children": [
+        { "name": "Austin Griffith's ETH repos", "img": "", "url": "https://github.com/austintgriffith", "value": 10},
+        { "name": "Graph protocol", "img": "https://miro.medium.com/fit/c/160/160/1*uOUrHJwAlNPBiGzl3slkWw.png", "url": "https://thegraph.com/", "value": 10},
+        { "name": "Ethers-io", "img": "", "url": "https://github.com/ethers-io", "value": 10},
+        { "name": "Hardhat", "img": "", "url": "https://hardhat.org/", "value": 10},
+        { "name": "Infura", "img": "https://static.blockgeeks.com/wp-content/uploads/2020/03/infura_logo_black.png", "url": "https://infura.io/", "value": 10},
+        { "name": "Near", "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVFmgnvg6_dGKjIulPaNZcfPY4oK5WOWPAj-BNzy6OWYa4cd-rsFjspw_VybBmzQo1svA&usqp=CAU", "url": "https://near.org/", "value": 10},
+        { "name": "Open zeppelin", "img": "https://openzeppelin.com/images/card.jpg", "url": "https://openzeppelin.com/", "value": 10},
+        { "name": "Solidity", "img": "https://docs.soliditylang.org/en/v0.4.24/_images/logo.svg", "url": "https://soliditylang.org/", "value": 10},
+        { "name": "Radicle", "img": "https://pbs.twimg.com/profile_images/1372563232850870274/aREQff_C_400x400.jpg", "url": "https://radicle.xyz/", "value": 10}
+      ]
+    },
+    {
+      "name": "Defi helpers", "icon":  "",
+      "children": [
+        { "name": "dex tools", "img": "", "url": "https://www.dextools.io/app/", "value": 10},
+        { "name": "fees.wtf", "img": "", "url": "https://fees.wtf/", "value": 10},
+        { "name": "vfat - pool tools", "img": "", "url": "https://vfat.tools/all/", "value": 10 },
+        { "name": "Augur", "img": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x1985365e9f78359a9B6AD760e32412f4a445E862/logo.png", "url": "https://www.augur.net/", "value": 10},
+        { "name": "Etherscan", "img": "", "url": "https://etherscan.io/", "value": 10},
+        { "name": "Defi llama", "img": "", "url": "https://defillama.com/home", "value": 10},
+        { "name": "Enzyme", "img": "", "url": "https://enzyme.finance/", "value": 10},
+        { "name": "Liquidity folio", "img": "", "url": "https://www.liquidityfolio.com/", "value": 10},
+        { "name": "Orchid", "img": "https://assets.coingecko.com/coins/images/3916/thumb/download_%285%29.png?1576624060", "url": "https://www.orchid.com/oxt", "value": 10},
+        { "name": "Stake dao", "img": "https://assets.coingecko.com/coins/images/13724/thumb/stakedao_logo.jpg?1611195011", "url": "https://stakedao.org/", "value": 10},
+        { "name": "Staking rewards", "img": "https://www.stakingrewards.com/static/images/icon.svg", "url": "https://www.stakingrewards.com/", "value": 10},
+        { "name": "Tokensets", "img": "https://www.tokensets.com/static/media/set-and-tokensets-logo.872a2884.svg", "url": "https://www.tokensets.com/", "value": 10},
+        { "name": "Zapper", "img": "", "url": "https://zapper.fi/", "value": 10},
+        { "name": "Zerion", "img": "", "url": "https://zerion.io/", "value": 10}
+      ]
+    },
+    {
+      "name": "Insurance", "icon":  "",
+      "children": [
+        { "name": "Cover", "img": "https://assets.coingecko.com/coins/images/13563/thumb/1_eWBbDaqpxXqt7WYPSP4qSw.jpeg?1609822578", "url": "https://www.coverprotocol.com/", "value": 10},
+        { "name": "Nexus mutual", "img": "https://assets.coingecko.com/coins/images/11890/thumb/wrapped-nexus-mutual.jpg?1595811559", "url": "https://nexustracker.io/", "value": 10}
+      ]
+    },
+    {
+      "name": "Learn", "icon":  "",
+      "children": [
+        { "name": "Crypto Testers", "img": "", "url": "", "value": 10,
+        "children": [
+            { "name": "www", "img": "", "url": "https://cryptotesters.com/", "value": 2},
+            { "name": "twitter", "img": "", "url": "https://twitter.com/cryptotesters", "value": 2}
+          ]
+        },
+        { "name": "Tx Street", "img": "", "url": "", "value": 10,
+          "children": [
+            { "name": "twitter", "img": "", "url": "https://twitter.com/txstreetCom", "value": 2},
+            { "name": "www", "img": "", "url": "https://txstreet.com/", "value": 2}
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Portfolio", "icon":  "",
+      "children": [
+        { "name": "Blockfolio", "img": "", "url": "https://blockfolio.com/", "value": 10},
+        { "name": "Coingecko", "img": "", "url": "https://www.coingecko.com/", "value": 10},
+        { "name": "Rotki", "img": "", "url": "https://rotki.com/", "value": 10}
+      ]
+    },
+    {
+      "name": "Defi", "icon":  "",
+      "children": [
+        { "name": "0x", "img": "https://assets.coingecko.com/coins/images/863/thumb/0x.png?1547034672", "url": "https://0x.org/", "value": 10},
+        { "name": "AAVE", "img": "https://assets.coingecko.com/coins/images/12645/thumb/AAVE.png?1601374110", "url": "https://aave.com/", "value": 10},
+        { "name": "Alchemix", "img": "https://app.alchemix.fi/static/media/AlchemixLogo.af98983b.png", "value": 2,
+          "children":
+                  [
+                    { "name" : "Alchemix website", "url" :  "https://app.alchemix.fi", "value": 2 },
+                    { "name" : "Alchemix info by 0xdefi", "url" :  "https://dyor.fi/alcx", "value": 2 },
+                    { "name" : "Alchemix vfat pool analytics", "url" :  "https://vfat.tools/", "value": 2 },
+                    { "name" : "Alchemix discord", "url" :  "https://discord.com/invite/csa9mTRK6j", "value": 2 },
+                    { "name" : "Alchemix twitter", "url" :  "https://twitter.com/AlchemixFi", "value": 2 }
+                  ]
+        },
+        { "name": "Alpha", "img": "https://assets.coingecko.com/coins/images/12738/thumb/AlphaToken_256x256.png?1617160876", "url": "https://homora.alphafinance.io/", "value": 10},
+        { "name": "Badger", "img": "https://assets.coingecko.com/coins/images/13287/thumb/badger_dao_logo.jpg?1607054976", "url": "https://app.badger.finance/", "value": 10},
+        { "name": "Bancor", "img": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x1F573D6Fb3F13d689FF844B4cE37794d79a7FF1C/logo.png", "url": "https://app.bancor.network/", "value": 10},
+        { "name": "Basket DAO", "img": "https://assets.coingecko.com/coins/images/14636/small/BASK_200_CIRCLE.png?1617494952", "value": 10,"children":
+        [
+          { "name" : "www", "url" :  "https://basketdao.org/", "value": 2 },
+          { "name" : "bdpi live", "url" :  "https://www.bdpi.live/", "value": 2 },
+          { "name" : "twitter", "url" :  "https://twitter.com/BasketDAOOrg", "value": 2 },
+          { "name" : "discord", "url" :  "https://t.co/jFLQ10IHj8?amp=1", "value": 2 }
+        ]
+        },
+        { "name": "Compound", "img": "https://assets.coingecko.com/coins/images/10775/thumb/COMP.png?1592625425", "value": 10, "children" : [
+             { "name": "Analytics",
+               "children": [
+                 { "name": "Messari", "img": "https://pbs.twimg.com/profile_images/1085325338685640704/TNls9ggU_400x400.jpg", "url": "https://messari.io/asset/compound", "value": 1 },
+                 { "name": "Dune analytics", "url": "https://www.duneanalytics.com/projects/compound", "value": 1 }
+               ]
+             },
+          { "name": "People",
+            "children": [
+              { "name": "Calvin Liu", "url": "https://twitter.com/cjliu49", "value": 1 },
+              { "name": "Geoffrey Hayes", "url": "https://twitter.com/justhgh", "value": 1 },
+              { "name": "Robert Leshner", "url": "https://twitter.com/rleshner", "value": 1 }
+            ]
+          },
+          { "name": "www",
+            "children": [
+              { "name": "Website", "url": "https://compound.finance/", "value": 1 },
+              { "name": "Twitter", "url": "https://twitter.com/compoundfinance", "value": 1 },
+              { "name": "Substack", "url": "https://compound.substack.com/", "value": 1 }
+            ]
+          }
+        ]
+        },
+        { "name": "Curve", "img": "https://assets.coingecko.com/coins/images/12124/thumb/Curve.png?1597369484", "url": "https://www.curve.fi/", "value": 10},
+        { "name": "Dodo", "img": "https://assets.coingecko.com/coins/images/12651/thumb/dodo_logo.png?1601433025", "url": "https://dodoex.io/", "value": 10},
+        { "name": "Harvest Finance", "img": "https://assets.coingecko.com/coins/images/12304/thumb/Harvest.png?1613016180", "value": 2, "children" :
+        [
+          { "name" :  "Homepage", "url": "https://harvest.finance/", "value": 3 },
+          { "name" :  "Twitter", "url": "https://twitter.com/harvest_finance", "value": 3 },
+          { "name" :  "Discord", "url": "http://discord.gg/gzWAG3Wx7Y", "value": 3 },
+          { "name" :  "Github", "url": "https://github.com/harvest-finance/", "value": 3 },
+          { "name" :  "Security audits", "url": "https://github.com/harvest-finance/harvest/tree/master/audits", "value": 3 }
+        ]
+        },
+        { "name": "Indexed finance", "img": "https://assets.coingecko.com/coins/images/13546/thumb/indexed-light.74bb5471.png?1609712728", "url": "https://indexed.finance/", "value": 10},
+        { "name": "Maker", "img": "https://assets.coingecko.com/coins/images/1364/thumb/Mark_Maker.png?1585191826", "url": "https://makerdao.com/", "value": 10},
+        { "name": "Numeraire", "img": "https://assets.coingecko.com/coins/images/752/thumb/numeraire.png?1592538976", "url": "https://numer.ai/", "value": 10},
+        { "name": "Paraswap", "img": "", "url": "https://paraswap.io/", "value": 10},
+        { "name": "Rari Capital", "img": "https://assets.coingecko.com/coins/images/12900/thumb/Rari_Logo_Transparent.png?1613978014", "value": 2, "children" :
+        [
+          { "name" :  "Homepage", "url": "https://rari.capital/", "value": 3 },
+          { "name" :  "App", "url": "https://app.rari.capital/", "value": 3 },
+          { "name" :  "Analytics - fees and capital", "url": "https://rari.grafana.net/d/44n5PTlGk/fees-reserves", "value": 3 },
+          { "name" :  "Docs and links", "url": "https://www.notion.so/Rari-Capital-3d762a07d2c9417e9cd8c2e4f719e4c3", "value": 3 },
+          { "name" :  "Twitter", "url": "https://twitter.com/RariCapital", "value": 3 },
+          { "name" :  "Discord", "url": "https://discord.gg/mtb6W57Ap6", "value": 3 }
+        ]
+        },
+        { "name": "Unit", "img": "https://assets.coingecko.com/coins/images/11862/thumb/Unit.png?1595580755", "url": "https://unit.xyz/", "value": 10},
+        { "name": "Yam finance", "img": "https://assets.coingecko.com/coins/images/12179/thumb/YAM-v2.png?1597892396", "url": "https://yam.finance/", "value": 10},
+        { "name": "Yearn", "img": "https://assets.coingecko.com/coins/images/11849/thumb/yfi-192x192.png?1598325330", "value": 2, "children" : [
+          { "name": "Core",
+            "children": [
+              { "name": "yearn.fi", "url": "http://yearn.fi", "value": 1 },
+              { "name": "yearn.finance", "url": "http://yearn.finance", "value": 1 }
+            ]
+          },
+          { "name": "Analytics",
+            "children": [
+              { "name": "yearn.science", "url": "http://yearn.science", "value": 1 },
+              { "name": "yearn.vision", "url": "http://yearn.vision", "value": 1 },
+              { "name": "yearn.stats", "url": "http://yearn.fi/stats", "value": 1 },
+              { "name": "yearn-roi", "url": "http://yearn-roi.xyz", "value": 1 }
+            ]
+          },
+          { "name": "Ecosystem",
+            "children": [
+              { "name": "ycosystem", "url": "http://ycosystem.info", "value": 1 },
+              { "name": "coordinape", "url": "http://coordinape.com", "value": 1 },
+              { "name": "ygift", "url": "http://ygift.to", "value": 1 }
+            ]
+          }
+        ]}]},
+    {
+      "name": "Wallets", "icon":  "",
+      "children": [
+        { "name": "Rainbow", "img": "https://rainbow.me/resources/css/images/rainbow-logo.png", "url": "https://rainbow.me/", "value": 10},
+        { "name": "Ledger", "img": "", "url": "https://www.ledger.com/", "value": 10},
+        { "name": "Trezor", "img": "", "url": "https://trezor.io/", "value": 10},
+        { "name": "Onto", "img": "", "url": "https://www.onto.app/", "value": 10},
+        { "name": "MyCrypto", "img": "", "url": "https://mycrypto.com/", "value": 10},
+        { "name": "Edge", "img": "", "url": "https://edge.app/", "value": 10},
+        { "name": "Loopring", "img": "https://assets.coingecko.com/coins/images/913/thumb/LRC.png?1572852344", "url": "https://loopring.io/#/", "value": 10},
+        { "name": "Math wallet", "img": "https://assets.coingecko.com/coins/images/11335/small/2020-05-19-token-200.png?1589940590", "url": "https://mathwallet.org/", "value": 10},
+        { "name": "MEW", "img": "", "url": "https://www.myetherwallet.com/", "value": 10},
+        { "name": "Metamask", "img": "", "value": 10, "children": [
+          {"name": "website", "img": "", "url": "https://twitter.com/MetaMask", "value": 1},
+          {"name": "twitter", "img": "", "url": "https://twitter.com/MetaMask", "value": 1},
+          {"name": "support twitter", "img": "", "url": "https://twitter.com/MetamaskSupport", "value": 1},
+          {"name": "support website", "img": "", "url": "https://metamask.zendesk.com/hc/en-us", "value": 1},
+          {"name": "community website", "img": "", "url": "https://community.metamask.io/", "value": 1}
+        ]
+        },
+        { "name": "Trust wallet", "img": "https://assets.coingecko.com/coins/images/11085/small/Trust.png?1588062702", "url": "https://trustwallet.com/", "value": 10}
+      ]
+    },
+    {
+      "name": "Analysis and insight", "icon":  "",
+      "children": [
+        { "name": "Coin98", "img": "", "url": "https://twitter.com/Coin98Analytics", "value": 10},
+        { "name": "Crypto art data", "img": "", "url": "https://cryptoart.io/data", "value": 10},
+        { "name": "Crypto fees", "img": "", "url": "https://cryptofees.info/", "value": 10},
+        { "name": "Decrypt", "img": "", "url": "https://decrypt.co", "value": 10},
+        { "name": "Defiant", "img": "", "url": "https://thedefiant.io/", "value": 10},
+        { "name": "Deribit insights", "img": "", "url": "https://insights.deribit.com/", "value": 10},
+        { "name": "Dune analytics", "img": "", "url": "https://duneanalytics.com/", "value": 10},
+        { "name": "Gabriel Haines", "img": "", "value": 10, "children":
+        [
+          {"name": "YouTube", "url": "http://YouTube.com/gabrielhaines", "value": 2},
+          {"name": "Twitter", "url": "https://twitter.com/gabrielhaines", "value": 2}
+        ]},
+        { "name": "Messari", "img": "https://pbs.twimg.com/profile_images/1085325338685640704/TNls9ggU_400x400.jpg", "url": "https://messari.io/", "value": 10},
+        { "name": "Rebase", "img": "", "url": "https://rebase.foundation/", "value": 10},
+        { "name": "Rekt", "img": "", "url": "https://rekt.eth.link/", "value": 10},
+        { "name": "Santiment", "img": "", "url": "https://app.santiment.net/", "value": 10},
+        { "name": "The daily gwei", "img": "", "url": "https://thedailygwei.substack.com/", "value": 10},
+        { "name": "Token daily", "img": "", "url": "https://www.tokendaily.co/", "value": 10}
+      ]
+    },
+    {
+      "name": "NFT", "icon":  "",
+      "children": [
+        { "name": "Aavegotchi", "img": "https://assets.coingecko.com/coins/images/12467/thumb/ghst_200.png?1600750321", "url": "https://aavegotchi.com/", "value": 10},
+        { "name": "Alchemy DAO", "img": "", "value": 4, "children":  [
+          { "name": "www", "img": "", "url": "https://alchemydao.com/", "value": 2},
+          { "name": "discord", "img": "", "url": "https://discord.com/invite/mMMGBrbqHG", "value": 2},
+          { "name": "docs", "img": "", "url": "https://docs.alchemydao.com/", "value": 2},
+          { "name": "etherscan", "img": "", "url": "https://etherscan.io/address/0xdc2778E19C7F32D2Cf0c4c90B705Fb702Aa94150#code", "value": 2},
+          { "name": "forum", "img": "", "url": "https://forum.alchemydao.com/", "value": 2},
+          { "name": "github", "img": "", "url": "https://github.com/AlchemyDAO", "value": 2},
+          { "name": "substack", "img": "", "url": "https://alchemydao.substack.com/", "value": 2},
+          { "name": "telegram", "img": "", "url": "https://t.me/AlchemyOfficial", "value": 2},
+          { "name": "twitter", "img": "", "url": "https://twitter.com/alchemydao", "value": 2}
+        ]},
+        { "name": "Axie infinity", "img": "https://assets.coingecko.com/coins/images/13029/thumb/axie_infinity_logo.png?1604471082", "url": "https://axieinfinity.com/", "value": 10},
+        { "name": "Blackpool", "img": "", "url": "https://www.blackpool.finance/", "value": 10},
+        { "name": "Cryptovoxels", "img": "", "url": "https://www.cryptovoxels.com/", "value": 10},
+        { "name": "Cometh", "img": "", "url": "https://www.cometh.io/", "value": 10},
+        { "name": "Degendata", "img": "", "url": "https://degendata.io/", "value": 10},
+        { "name": "Doki doki", "img": "https://assets.coingecko.com/coins/images/12759/thumb/doki_logo.png?1602338064", "url": "https://dokidoki.finance/", "value": 10},
+        { "name": "Ethereum name service", "img": "", "url": "https://ens.domains/", "value": 10},
+        { "name": "Mycospace", "img": "", "url": "https://myco.space/", "value": 10},
+        { "name": "Neon district", "img": "", "url": "https://neondistrict.io/", "value": 10},
+        { "name": "Palm", "img": "", "url": "https://palm.io/", "value": 10},
+        { "name": "Nifty ink", "img": "", "value": 10, "children": [
+          {"name": "www", "img": "", "url": "https://nifty.ink/", "value": 2},
+          {"name": "how to get xDai", "img": "", "url": "https://support.mycrypto.com/general-knowledge/scaling/how-to-get-xdai", "value": 2}
+        ]},
+        { "name": "On-chain", "img": "", "value": 10, "children": [
+          {"name": "ascii punks", "img": "", "url": "https://asciipunks.com/", "value": 2},
+          {"name": "Mandalas", "img": "", "url": "https://mandalas.eth.link/", "value": 2}
+        ]},
+        { "name": "Rarible", "img": "https://assets.coingecko.com/coins/images/11845/thumb/Rari.png?1594946953", "value": 10, "children": [
+          {"name": "Compusophy", "img": "", "url": "https://rarible.com/compusophy", "value": 2},
+          {"name": "Ratwell", "img": "", "url": "https://rarible.com/ratwassie", "value": 2}
+        ]},
+        { "name": "Opensea", "img": "", "value": 10, "children": [
+          {"name": "Opensea www", "img": "https://github.com/trustwallet/assets/blob/master/dapps/opensea.io.png", "url": "https://opensea.io/", "value": 2},
+          {"name": "Crypto punks", "img": "", "url": "https://opensea.io/collection/cryptopunks", "value": 2},
+          {"name": "The pixel portraits", "img": "", "url": "https://opensea.io/collection/the-pixel-portraits", "value": 2}
+        ]},
+        { "name": "Decentraland", "img": "https://assets.coingecko.com/coins/images/878/thumb/decentraland-mana.png?1550108745", "url": "https://decentraland.org/", "value": 10},
+        { "name": "Mooncats", "img": "", "value": 10, "children" : [
+          {"name": "Colour chart", "url": "https://www.reddit.com/r/MoonCatRescue/comments/m4h7lx/visual_of_the_huebased_color_whee_how_mooncats/", "value": 2},
+          {"name": "Rarity sheet", "url": "https://rarity.studio/cats.html", "value": 2},
+          {"name": "Adoption center", "url": "https://mooncatrescue.com/adopt.html", "value": 2},
+          {"name": "Degendata", "img": "", "url": "https://degendata.io/", "value": 2}
+        ]},
+        { "name": "Seascape", "img": "", "url": "https://app.seascape.network/", "value": 10},
+        { "name": "Superrare", "img": "", "url": "https://www.superrare.co/", "value": 10},
+        { "name": "Foundation", "img": "", "value": 10, "children":
+        [
+          { "name": "Nyan cat", "img": "", "url": "https://foundation.app/NyanCat", "value": 2},
+          { "name": "Pussy riot", "img": "", "url": "https://foundation.app/PussyRiot", "value": 2},
+          { "name": "Ix shells", "img": "", "url": "https://foundation.app/ixshells", "value": 2},
+          { "name": "Zach lieberman", "img": "", "url": "https://foundation.app/zach.lieberman", "value": 2},
+          { "name": "Blake kathryn", "img": "", "url": "https://foundation.app/blakekathryn", "value": 2}
+        ]
+        }
+      ]
+    },
+    {
+      "name": "Security", "icon":  "",
+      "children": [
+        { "name": "Crypto security 101", "img": "", "url": "https://medium.com/mycrypto/the-10-best-things-you-can-do-to-not-lose-your-crypto-dba4f5c05c7", "value": 10},
+        { "name": "Crypto scam db", "img": "", "url": "https://www.cryptoscamdb.org/scams", "value": 10},
+        { "name": "DNS checker", "img": "", "url": "https://dnschecker.org/", "value": 10},
+        { "name": "UrlScan", "img": "", "url": "https://urlscan.io/", "value": 10}
+      ]
+    },
+    {
+      "name": "Ownership and DAOs", "icon":  "",
+      "children": [
+        { "name": "Colony", "img": "", "url": "https://colony.io/", "value": 10},
+        { "name": "Daohaus", "img": "", "url": "https://daohaus.club/", "value": 10},
+        { "name": "Fairmint", "img": "", "url": "https://fairmint.co/", "value": 10},
+        { "name": "Opolis", "img": "", "url": "https://opolis.co/", "value": 10}
+      ]
+    },
+    {
+      "name": "Merch", "icon":  "",
+      "children": [
+        { "name": "APE SZN", "img": "", "url": "https://apeszn.com/", "value": 10},
+        { "name": "Cryptolife", "img": "", "url": "https://cryptolife.shop/", "value": 10},
+        { "name": "loldefi", "img": "", "url": "https://loldefi.com/", "value": 10},
+        { "name": "Metafactory", "img": "", "url": "https://metafactory.ai/", "value": 10}
+      ]
+    }
+  ]
+}

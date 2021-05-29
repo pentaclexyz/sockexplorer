@@ -1,0 +1,49 @@
+input {
+  font-size: _size(regular);
+  border: 1px solid _color(border-input);
+
+  &[type=text], &[type=number] {
+    padding: .35rem .75rem;
+    font-size: _font(size-regular);
+  }
+
+  &:-moz-focusring {
+    outline: 3px solid _color(border-input);
+  }
+
+  &[type=number] + select {
+    margin-left: 1rem;
+  }
+
+  &[type=checkbox],
+  &[type=radio] {
+    padding: 0;
+
+    + span {
+      margin-left: .5rem;
+    }
+
+    &:-moz-focusring {
+      outline: 0;
+    }
+  }
+
+  &[type=radio] {
+    -webkit-appearance: radio;
+  }
+
+  &[type=checkbox] {
+    -webkit-appearance: checkbox;
+  }
+
+}
+
+.select-fancy {
+  padding: .35rem .75rem;
+  border-radius: 1.5rem;
+  font-size: .75rem;
+  font-family: _font(family-regular);
+  letter-spacing: .0125rem;
+  border: 1px solid _color(border-input);
+  line-height: 1.5rem;
+}

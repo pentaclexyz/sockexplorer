@@ -1,0 +1,37 @@
+table {
+  margin-top: 1rem;
+  border-collapse: separate;
+  border-spacing: 0;
+  width: 100%;
+
+  th, td {
+    text-align: left;
+    font-weight: unset;
+    padding: 1rem;
+  }
+
+  td {
+  }
+
+  thead {
+    th {
+      border-bottom: 1px solid _color(border-th);
+      color: _color(heading-2);
+      font-family: _font(family-medium);
+      padding-bottom: 1rem;
+    }
+  }
+
+  tbody {
+    tr {
+      td {
+        border-bottom: 1px solid _color(border-td);
+      }
+      &:last-child {
+        td {
+          border-bottom: none;
+        }
+      }
+    }
+  }
+}

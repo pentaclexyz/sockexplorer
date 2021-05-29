@@ -1,0 +1,85 @@
+h1, h2, h3, h4 {
+  color: _color(heading-1);
+  margin: 0;
+  padding: 0;
+  font-weight: unset;
+}
+
+h1 {
+  font-family: _font(family-default);
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  font-weight: 600;
+}
+
+h2 {
+  font-family: _font(family-default);
+  font-size: 1.2rem;
+  line-height: 2rem;
+  padding-top: 1rem;
+  padding-bottom: .5rem;
+  font-weight: 600;
+}
+
+h3 {
+  font-family: _font(family-default);
+  font-weight: 700;
+  font-size: 1rem;
+  vertical-align: center;
+  > span {
+    font-size: 1.5rem;
+  }
+}
+
+h4 {
+  font-family: _font(family-default);
+  font-size: .75rem;
+  padding-top: 1rem;
+  padding-bottom: .5rem;
+  border-bottom: 1px dotted rgba(255,255,255, .25);
+  width: calc(100% - 1rem);
+  margin-bottom: 1rem;
+}
+
+
+table, p, em, div, input {
+  font-family: _font(family-body);
+  font-size: _font(size-regular);
+  margin: 0;
+  padding: 0;
+}
+
+p + p {
+  margin-top: .5rem;
+}
+
+
+
+.bold {
+  font-family: _font(family-default);
+}
+.semibold {
+  font-family: _font(family-default);
+}
+.regular {
+  font-family: _font(family-default);
+}
+.medium {
+  font-family: _font(family-default);
+}
+.light {
+  font-family: _font(family-default);
+}
+
+.text-highlight {
+  color: _color(tertiary);
+}
+
+.text-white {
+  color: _color(white);
+}
+
+
+

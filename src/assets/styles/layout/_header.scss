@@ -1,0 +1,27 @@
+header {
+  box-sizing: border-box;
+  width: 100%;
+  text-align: left;
+  padding: 1.5rem 0;
+  color: _color(primary);
+
+  a {
+    font-size: .875rem;
+    font-weight: 500;
+    text-decoration: none;
+  }
+
+  .logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: white;
+  }
+}
+
+@media only screen and (min-width: _breakpoint(step-three)) {
+
+  header {
+    text-align: left;
+    padding: 1.5rem 0;
+  }
+}

@@ -1,0 +1,12 @@
+.describe {
+  padding: .5rem 1rem;
+  font-family: _font(family-regular);
+  background-color: _color(bg-describe);
+  font-size: _font(size-regular);
+  border-radius: .3rem;
+  display: inline-block;
+}
+
+.describe-small {
+  font-size: _font(size-small);
+}

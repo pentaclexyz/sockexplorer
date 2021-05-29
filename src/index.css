@@ -1,0 +1,24 @@
+
+.fancy-bg {
+  background:
+   /*radial-gradient(ellipse at top,#A4A2F9 0,rgba(229,177,209, .25) 100%),*/
+   /*radial-gradient(50% 50% at 80% 100%,#520aeb 0,rgba(251,229,134, .5) 100%),*/
+   /*radial-gradient(farthest-side at 20% 0,#cbf2bf 0,rgba(255,127,80, .9) 80%),*/
+   /*radial-gradient(farthest-corner at 50rem 50rem,#7e7485 0,rgba(164,162,249, .78) 90%),*/
+   /*radial-gradient(closest-side at 100% 20%,#520aeb 0,rgba(251,229,134, .5) 70%),*/
+   /*radial-gradient(ellipse at bottom,#e5ddea 0,rgba(227,227,253, .26) 100%);*/
+
+  radial-gradient(ellipse at top left,rgba(249,196,60,.3) 0,rgba(231,166,1,0) 100%) top right/100% 300%,
+  radial-gradient(closest-side at bottom right,#520aeb 10.27%,rgba(159,115,255,0) 100%) top left/175% 200%,
+  radial-gradient(ellipse at top,#520aeb 10.27%,rgba(159,115,255,0) 100%) top right/200% 280%,
+  radial-gradient(closest-corner at bottom,#00a7ff 0,rgba(0,166,254,.12) 100%) top right/160% 400%,
+  radial-gradient(farthest-corner at top,#ff8d6c 0,rgba(255,92,0,.6) 100%) bottom right/200% 180%,
+  radial-gradient(closest-side at 80% 100%,#e81d72 0,rgba(255,0,0,0) 100%) bottom left/150% 200%;
+  animation: colorChange 10s infinite alternate;
+}
+
+@keyframes colorChange {
+  to {
+    background-position:top left;
+  }
+}

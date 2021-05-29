@@ -1,0 +1,31 @@
+@font-face {
+  font-family: 'fira-light';
+  src: url('#{$font-path}/Fira_Code/FiraCode-Light.ttf')  format('truetype');
+}
+
+@font-face {
+  font-family: 'fira-regular';
+  src: url('#{$font-path}/Fira_Code/FiraCode-Regular.ttf')  format('truetype');
+}
+
+@font-face {
+  font-family: 'fira-medium';
+  src: url('#{$font-path}/Fira_Code/FiraCode-Medium.ttf')  format('truetype');
+}
+
+@font-face {
+  font-family: 'fira-semibold';
+  src: url('#{$font-path}/Fira_Code/FiraCode-SemiBold.ttf')  format('truetype');
+}
+
+@font-face {
+  font-family: 'fira-bold';
+  src: url('#{$font-path}/Fira_Code/FiraCode-Bold.ttf')  format('truetype');
+}
+
+@font-face {
+  font-family: "material-icons";
+  font-style: normal;
+  font-weight: normal;
+  src: url("#{$font-path}/material-design-icons/material.ttf")
+}

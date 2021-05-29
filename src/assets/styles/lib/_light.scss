@@ -1,0 +1,67 @@
+
+$color: (
+        primary:               rgba(127,0,255,.5),
+        bg:                    rgb(255,255,255),
+        secondary:             rgba(219,239,88,1),
+        secondary-tr: rgba(219, 239, 88, 0.01),
+        tertiary:              rgba(110, 247, 24, 1),
+
+        fancy:                 rgb(255,128,255),
+        box-bg:                rgba(255,255,255,1),
+        box-feature-bg:        rgb(10,10,40),
+
+        bg-box:                rgb(230,230,230),
+        bg-box-secondary:      rgba(230,179,255,.5),
+        bg-60:                 rgba(255,255,255,.6),
+        bg-header:             rgb(10,10,40),
+        bg-describe:           rgba(230,179,255,.5),
+        bg-input:              rgba(230,179,255,.5),
+        border-input:          rgba(230,179,255,.5),
+        bg-highlight:          rgba(219,239,88,.15),
+
+        button-primary:        rgba(127,0,255,1),
+        button-secondary:      rgb(255,128,255),
+        button-tertiary:       rgb(119,255,51),
+        button-delete:         rgba(255,51,85, 1),
+        button-cancel:         rgba(255,128,255, .1),
+
+        button-text-primary:   rgb(230,230,230),
+        button-text-gradient:  rgb(230,230,230),
+        button-text-secondary: rgb(255,255,255),
+        button-text-tertiary:  rgb(10,10,40),
+        button-text-delete:    rgb(255,255,255),
+        button-text-cancel:    rgb(10,10,40),
+        button-text-link:      rgb(127,0,255),
+
+        heading-1:             rgb(240,240,240),
+        heading-2:             rgb(240,240,240),
+
+        link:                  rgb(255,128,255),
+        body-text:             rgb(32,32,32),
+        body-text-inverse:     rgb(240,240,240),
+        modal-text:            rgb(240,240,240),
+
+        bg-footer:             rgb(255,255,255),
+        text-footer:           rgb(32,32,32),
+        link-footer:           rgb(127,0,255),
+
+        nav-link:              rgb(32,32,32),
+        nav-icons-primary:     rgb(255,128,255),
+        nav-icons-secondary:   rgba(219,239,88,.5),
+
+        border-header:         rgba(127,0,255,1),
+        border-footer:         rgb(32,32,32),
+
+        border-primary:        rgb(32,32,32),
+        border-light:          rgb(229,204,225),
+        border-th:             rgba(230,179,255,.25),
+        border-td:             rgba(230,179,255,.15),
+        border-box:            rgba(127,0,255,.5),
+        border-box-feature:    rgb(119,255,51),
+
+        white:                 rgb(255,255,255),
+        white-50:              rgb(240,240,240),
+        transparent:           transparent,
+
+        bg-fancy-lilac:        linear-gradient(135deg,rgba(127,0,255,.75) -25%,rgba(127,0,255, .35) 150%)
+);

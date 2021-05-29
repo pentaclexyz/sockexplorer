@@ -1,0 +1,18 @@
+footer {
+  position: fixed;
+  bottom: 0;
+  background-color: _color(bg-footer);
+  font-size: .75rem;
+  width: 100%;
+
+  .footer-content {
+    padding: .5rem 2rem;
+    color: _color(text-footer);
+
+    a {
+      font-size: .65rem;
+      margin-left: 1rem;
+      color: _color(link);
+    }
+  }
+}

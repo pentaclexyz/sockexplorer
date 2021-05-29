@@ -1,0 +1,61 @@
+.box-padding {
+  padding: 1rem 2rem 2rem 2rem;
+}
+
+.box {
+  background-color: _color(box-bg);
+  border-radius: .25rem;
+  box-sizing: border-box;
+
+
+  &.feature {
+    border-radius: .75rem;
+    background-color: _color(box-feature-bg);
+
+    h3 {
+      margin-bottom: .5rem;
+    }
+
+    p {
+      font-size: .8125rem;
+      line-height: 1.25rem;
+    }
+
+    p + p {
+      margin-top: 1rem;
+    }
+
+    &.hero {
+      text-align: center;
+
+      p {
+        //font-size: 1rem;
+        //line-height: 1.5rem;
+      }
+    }
+
+
+    &.small {
+      padding: 1rem .5rem 1rem .5rem;
+
+      p {
+        font-size: .8125rem;
+        line-height: 1.25rem;
+      }
+
+      p + p {
+        margin-top: .75rem;
+      }
+    }
+  }
+
+  &.solid {
+    background-color: _color(bg-box-secondary);
+  }
+}
+
+@media only screen and (min-width: _breakpoint(step-one)) {
+  .box {
+    margin-bottom: 1rem;
+  }
+}

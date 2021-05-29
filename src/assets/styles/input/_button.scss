@@ -1,0 +1,76 @@
+button {
+  padding: .35rem 1rem;
+  border-radius: 1.5rem;
+  font-size: .75rem;
+  font-family: _font(family-default);
+  letter-spacing: .0125rem;
+  border: none;
+  line-height: 1.5rem;
+  cursor: pointer;
+
+  &.small {
+    padding: .25rem .75rem;
+  }
+
+  &:hover {
+    filter: hue-rotate(25deg);
+  }
+
+  &.link {
+    color: _color(red);
+    background-color: transparent;
+    text-decoration: underline;
+  }
+
+  &.primary {
+    background: _color(button-primary);
+    color: _color(button-text-primary);
+  }
+
+  &.primary-gradient {
+    background: _color(bg-fancy-lilac);
+    color: _color(button-text-gradient);
+  }
+
+  &.secondary {
+    background-color: _color(button-secondary);
+    color: _color(button-text-secondary);
+  }
+
+  &.tertiary {
+    background-color: _color(button-tertiary);
+    color: _color(button-text-tertiary);
+  }
+
+  &.cancel {
+    background-color: _color(button-cancel);
+    color: _color(button-text-cancel);
+  }
+
+  &.delete {
+    background-color: _color(button-delete);
+    color: _color(button-text-delete);
+  }
+
+  .material-icons {
+    font-size: 1rem;
+    padding-right: .25rem !important;
+  }
+}
+
+button + button {
+  margin-left: .75rem;
+}
+
+table button {
+  font-size: .65rem;
+  padding: .25rem .5rem;
+}
+
+@media only screen and (min-width: _breakpoint(step-two)) {
+
+  button {
+    line-height: 1rem;
+  }
+
+}

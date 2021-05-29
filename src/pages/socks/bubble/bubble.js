@@ -66,18 +66,26 @@ export default function define(runtime, observer) {
                 .join("g")
                 .attr("transform", d => `translate(${d.x + 1},${d.y + 1})`);
 
+            leaf.append("text")
+                .attr("pointer-events", "none")
+                .attr('color', "violet")
+                .attr("dy", "0.35em")
+                .text(d => d.data.name)
 
             leaf.append("circle")
+                .attr("pointer-events", "all")
                 .attr("id", d => (d.leafUid = DOM.uid("leaf")).id)
                 .attr("r", d => d.r)
                 .attr("stroke", "#1c252c")
                 .attr("stroke-width", 0.1)
                 .attr("fill-opacity", 1)
                 .attr("fill", d => color(d.value))
-                .attr("xlink:href",  function(d) { return d.data.url;})
                 .on("mouseover", showTooltip)
                 .on("mouseleave", hideTooltip)
-                .on('click', function(d) {(window.open(d.data.url, '_blank'))})
+                .on('click', function(d) {(window.open(d.url, '_blank'))})
+
+
+
 
             simulation.on("tick", () => {
                 console.log(root.leaves());

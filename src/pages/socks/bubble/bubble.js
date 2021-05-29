@@ -1,12 +1,10 @@
 export default function define(runtime, observer) {
     const main = runtime.module();
-    const fileAttachments = new Map([["socks-holders.json", "/socks-holders.json"]]);
+    const fileAttachments = new Map([["socks-holders.json","/socks-holders.json"]]);
     main.builtin("FileAttachment", runtime.fileAttachments(name => fileAttachments.get(name)));
-    main.variable(observer()).define(["md"], function (md) {
-        return (
-            md`SOCK explorer`
-        )
-    });
+    main.variable(observer()).define(["md"], function(md){return(
+        md`# Unisocks holders`
+    )});
     main.variable(observer("chart"))
         .define("chart", ["pack", "data", "d3", "width", "height", "DOM", "color", "invalidation"],
             function (pack, data, d3, width, height, DOM, color, invalidation) {
@@ -43,9 +41,11 @@ export default function define(runtime, observer) {
                         .style("border", "solid")
                         .style("border-radius", ".5rem")
                         .style("padding", ".75rem")
-                        ;
+                        .text(d => d.data.wallet)
+                        // .html("Wallet Address: " + d.wallet + "<br>" + "Token Balance: " + d.value + "<br>" + "Initial Transaction Date: " + d.buydate+ "<br>" + "Last Transaction Date: " + d.lastdate)
 
-                        // .html("Wallet Address: " + d.data.wallet + "<br>" + "Token Balance: " + d.value + "<br>" + "Initial Transaction Date: " + d.buydate+ "<br>" + "Last Transaction Date: " + d.lastdate)
+                    ;
+
                 }
 
                 const hideTooltip = function (d) {

@@ -1,9 +1,9 @@
 import {Runtime, Inspector} from '@observablehq/runtime';
 import React, {useEffect, useRef} from 'react';
-import notebook from './sunburst';
+import notebook from './bubble';
 import NavigationSml from "../../components/navigationSml";
 
-export default function SolEcosystem() {
+export default function SockExplorer() {
     const ref = useRef();
 
     useEffect(() => {
@@ -17,8 +17,7 @@ export default function SolEcosystem() {
     }, []);
 
     return (
-        <main className={"ecosystem"}>
-            <NavigationSml/>
+        <main className={"ecosystem"} >
             <div ref={ref}/>
         </main>
     );

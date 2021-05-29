@@ -31,15 +31,20 @@ export default function define(runtime, observer) {
                 const tooltip = d3.select(".wallet-info")
                     .style("opacity", 0)
                     .attr("class", "tooltip")
+                    .text("wallet")
 
-                const showTooltip = function (d) {
+                .on('mousemove', e => tooltip.style('top', `${e.pageY}px`)
+                        .style('left', `${e.pageX + 10}px`))
+
+                const showTooltip = function(d) {
                     tooltip
                         .style("opacity", 1)
                         .style("background-color", "pink")
                         .style("border", "solid")
                         .style("border-radius", ".5rem")
                         .style("padding", ".75rem")
-                        // .text("wallet " + d.data.wallet)
+                        ;
+
                         // .html("Wallet Address: " + d.data.wallet + "<br>" + "Token Balance: " + d.value + "<br>" + "Initial Transaction Date: " + d.buydate+ "<br>" + "Last Transaction Date: " + d.lastdate)
                 }
 

@@ -1,6 +1,6 @@
 export default function define(runtime, observer) {
     const main = runtime.module();
-    const fileAttachments = new Map([["socks-holders.json","/socks-holders.json"]]);
+    const fileAttachments = new Map([["socks-holders.csv","/socks-holders.csv"]]);
     main.builtin("FileAttachment", runtime.fileAttachments(name => fileAttachments.get(name)));
     main.variable(observer()).define(["md"], function(md){return(
         md`SOCK explorer`
@@ -10,7 +10,6 @@ export default function define(runtime, observer) {
             function(pack,data,d3,width,height,DOM,color,invalidation) {
 
             const root = pack(data);
-            root.each((d) => (d.current = d));
 
             const s1 = 0.001
             const s2 = 0.9
@@ -66,8 +65,7 @@ export default function define(runtime, observer) {
                 .join("g")
                 .attr("transform", d => `translate(${d.x + 1},${d.y + 1})`);
 
-
-            leaf.append("circle")
+                leaf.append("circle")
                 .attr("id", d => (d.leafUid = DOM.uid("leaf")).id)
                 .attr("r", d => d.r)
                 .attr("stroke", "#1c252c")
@@ -100,7 +98,7 @@ export default function define(runtime, observer) {
         }
     );
     main.variable(observer("data")).define("data", ["FileAttachment"], function(FileAttachment){return(
-        FileAttachment("socks-holders.json").json()
+        FileAttachment("socks-holders.csv").text()
     )});
     main.variable(observer("pack")).define("pack", ["d3","width","height"], function(d3,width,height){return(
         data => d3.pack()
@@ -120,7 +118,7 @@ export default function define(runtime, observer) {
         d3.format(",d")
     )});
     main.variable(observer("color")).define("color", ["d3","data"], function(d3,data){return(
-        d3.scaleOrdinal()
+        d3.scaleSequential()
             .domain(data.map(d => d.group))
             .range(d3.quantize(t => d3.interpolateRdPu(t), 121))
     )});

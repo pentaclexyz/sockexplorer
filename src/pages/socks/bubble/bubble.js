@@ -37,7 +37,7 @@ export default function define(runtime, observer) {
                     .style("border", "solid")
                     .style("border-radius", ".5rem")
                     .style("padding", ".75rem")
-                    .html(d => d.data.wallet);
+                    .html(d.wallet);
             }
             var hideTooltip = function(d) {
                 tooltip
@@ -59,10 +59,16 @@ export default function define(runtime, observer) {
                 .attr("height", "100%")
                 .attr("fill", "#1c252c");
 
+
             const g = svg.append("g");
 
-            const leaf = g.selectAll("g")
-                .data(root.leaves())
+            // const leaf = g.selectAll("g")
+            //     .data(root.leaves())
+            //     .join("g")
+            //     .attr("transform", d => `translate(${d.x + 1},${d.y + 1})`);
+
+            const leaf = g.selectAll('g')
+                .data(root, d => d.wallet)
                 .join("g")
                 .attr("transform", d => `translate(${d.x + 1},${d.y + 1})`);
 

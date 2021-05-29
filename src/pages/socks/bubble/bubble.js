@@ -9,26 +9,29 @@ export default function define(runtime, observer) {
         .define("chart", ["pack","data","d3","width","height","DOM","color","invalidation"],
             function(pack,data,d3,width,height,DOM,color,invalidation) {
 
+            const centre = { x: width/2, y: height/2 };
+
             const root = pack(data);
             root.each((d) => (d.current = d));
 
-            const s1 = 0.001
-            const s2 = 0.9
-            const s3 = 0.8
+            const forceStrength = 0.001;
+            const strength_var_1 = 0.5;
+            const strength_var_2 = 0.8;
 
-            const simulation = d3
-                .forceSimulation(root.leaves())
-                .velocityDecay(0.5)
-                .force("x", d3.forceX(width / 2).strength(s1))
-                .force("y", d3.forceY(height / 2).strength(s1))
-                .force('charge', d3.forceManyBody().strength(s2))
-                .force("collision", d3.forceCollide().radius(function(d) {return d.r + 0.1;}).strength(s3));
+            let svg = null;
+            let nodes = [];
+
+            const simulation = d3.forceSimulation()
+                .force('charge', d3.forceManyBody().strength(strength_var_1))
+                // .velocityDecay(0.4)
+                .force('center', d3.forceCenter(centre.x, centre.y))
+                .force('x', d3.forceX(width / 2).strength(forceStrength).x(centre.x))
+                .force('y', d3.forceY(height / 2).strength(forceStrength).y(centre.y))
+                .force('collision', d3.forceCollide().radius(d => d.radius + 0.1).strength(strength_var_2));
 
             var tooltip = d3.select(".wallet-info")
-                .append("div")
                 .style("opacity", 0)
-                .style("color", "black");
-
+                .attr("class", "tooltip")
 
             var showTooltip = function(d) {
                 tooltip
@@ -49,17 +52,14 @@ export default function define(runtime, observer) {
                     .style("opacity", 1)
             }
 
-            const svg = d3.create("svg")
+            svg = d3.create("svg")
                 .attr("viewBox", [0, 0, width, height])
-                .attr("font-size", 10)
-                .attr("font-family", "sans-serif")
                 .attr("text-anchor", "middle");
 
             svg.append("rect")
                 .attr("width", "100%")
                 .attr("height", "100%")
                 .attr("fill", "#1c252c");
-
 
             const g = svg.append("g");
 

@@ -40,14 +40,14 @@ export default function define(runtime, observer) {
                     .enter().append('g')
                     .attr('transform', `translate(${width / 2}, ${height / 2})`);
 
-                const circle = leaf.append("circle")
+                const circle = leaf.append('circle')
                     .attr("id", d => (d.leafUid = DOM.uid("leaf")).id)
                     .attr("r", d => d.r)
                     .attr("fill", d => color(d.value))
 
                     .on('mouseover', function (e, d) {
                         tooltip.select('a').attr('href', d.data.url).text(d.data.url);
-                        tooltip.select('span').attr('class', d.data.category).text(d.data.category);
+                        tooltip.select('span').attr('class', d.data.wallet).text(d.data.wallet);
                         tooltip.style('visibility', 'visible');
 
                         d3.select(this).style('stroke', '#ff80ed')
@@ -66,7 +66,8 @@ export default function define(runtime, observer) {
 
                     const label = leaf.append('text')
                         .attr('dy', 2)
-                        .text(d => d.data.wallet.substring(0, d.r / 3));
+                        .style("cursor", "pointer")
+                        .text(d => d.data.wallet.substring(0, d.r / 3))
 
                     leaf.transition()
                         .ease(d3.easeExpInOut)

@@ -5,8 +5,8 @@ class Footer extends Component {
         return <footer>
             <article className={"footer-content flex-group space-between flex-align-end"}>
                 <div>
-                    <a href={"https://pentacle.ai"} target={"_blank"} rel="noopener noreferrer">Made by Pentacle</a>
                     <a href={"https://etherscan.io/address/pentacle.eth"} target={"_blank"} rel="noopener noreferrer">Donate to pentacle.eth</a>
+                    <a href={"https://pentacle.ai"} target={"_blank"} rel="noopener noreferrer">Made by Pentacle</a>
                     <a href={"https://github.com/pentacledotai/sockexplorer"} target={"_blank"} rel="noopener noreferrer">GitHub</a>
                 </div>
                 <div className={"embed"}>

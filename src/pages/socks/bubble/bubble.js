@@ -40,7 +40,7 @@ export default function define(runtime, observer) {
                     .enter().append('g')
                     .attr('transform', `translate(${width / 2}, ${height / 2})`);
 
-                leaf.append("circle")
+                const circle = leaf.append("circle")
                     .attr("id", d => (d.leafUid = DOM.uid("leaf")).id)
                     .attr("r", d => d.r)
                     .attr("fill", d => color(d.value))
@@ -64,30 +64,41 @@ export default function define(runtime, observer) {
 
                     .on('click', (e, d) => window.open(d.data.url));
 
-                leaf.append("clipPath")
-                    .attr("id", d => (d.clipUid = DOM.uid("clip")).id)
-                    .append("use")
-                    .attr("xlink:href", d => d.leafUid.href);
+                    const label = leaf.append('text')
+                        .attr('dy', 2)
+                        .text(d => d.data.wallet.substring(0, d.r / 3));
 
-                leaf.append("text")
-                    .attr("clip-path", d => d.clipUid)
-                    .text(d => `${d.data.wallet}`)
-                    .join("tspan");
+                    leaf.transition()
+                        .ease(d3.easeExpInOut)
+                        .duration(1000)
+                        .attr('transform', d => `translate(${d.x}, ${d.y})`);
 
-                leaf.append("title")
-                    // .text(d => `${d.data.wallet}`);
-                    .text(d => `${d.data.value}`);
+                    circle.transition()
+                        .ease(d3.easeExpInOut)
+                        .duration(1000)
+                        .attr('r', d => d.r);
 
-                simulation.on("tick", () => {
-                    leaf.attr("transform", d => `translate(${d.x + 1},${d.y + 1})`);
-                });
+                    label.transition()
+                        .delay(700)
+                        .ease(d3.easeExpInOut)
+                        .duration(1000)
+                        .style('opacity', 1)
 
-                svg.call(d3.zoom()
-                    .extent([[0, 0], [width, height]])
-                    .scaleExtent([1, 50])
-                    .on("zoom", zoomed));
+                    leaf.append("clipPath")
+                        .attr("id", d => (d.clipUid = DOM.uid("clip")).id)
+                        .append("use")
+                        .attr("xlink:href", d => d.leafUid.href);
 
-                invalidation.then(() => simulation.stop());
+                    simulation.on("tick", () => {
+                        leaf.attr("transform", d => `translate(${d.x + 1},${d.y + 1})`);
+                    });
+
+                    svg.call(d3.zoom()
+                        .extent([[0, 0], [width, height]])
+                        .scaleExtent([1, 50])
+                        .on("zoom", zoomed));
+
+                    invalidation.then(() => simulation.stop());
 
                 function zoomed({transform}) {
                     g.attr("transform", transform);

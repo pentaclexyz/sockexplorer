@@ -16,7 +16,7 @@ export default function SockExplorer() {
     }, []);
 
     return (
-        <main className={"ecosystem"}>
+        <main className={"socks"}>
             <div className={"tooltip"}></div>
             <div ref={ref}/>
         </main>

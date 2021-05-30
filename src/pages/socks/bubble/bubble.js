@@ -12,19 +12,22 @@ export default function define(runtime, observer) {
                 const centre = {x: width / 2, y: height / 2};
 
                 const root = pack(data);
+                const tooltip = d3.select('.tooltip');
                 // root.each((d) => (d.current = d));
 
-                const forceStrength = 0.001;
-                const strength_var_1 = 0.5;
-                const strength_var_2 = 0.8;
+                const s1 = 0.001
+                const s2 = 0.9
+                const s3 = 0.8
 
-                const simulation = d3.forceSimulation()
-                    .force('charge', d3.forceManyBody().strength(strength_var_1))
-                    .velocityDecay(0.4)
-                    .force('center', d3.forceCenter(centre.x, centre.y))
-                    .force('x', d3.forceX(width / 2).strength(forceStrength).x(centre.x))
-                    .force('y', d3.forceY(height / 2).strength(forceStrength).y(centre.y))
-                    .force('collision', d3.forceCollide().radius(d => d.radius + 0.1).strength(strength_var_2));
+                const simulation = d3
+                    .forceSimulation(root.leaves())
+                    .velocityDecay(0.5)
+                    .force("x", d3.forceX(width / 2).strength(s1))
+                    .force("y", d3.forceY(height / 2).strength(s1))
+                    .force('charge', d3.forceManyBody().strength(s2))
+                    .force(
+                        "collision",
+                        d3.forceCollide().radius(function(d) {return d.r + 0.1;}).strength(s3));
 
                 const svg = d3.create("svg")
                     .attr("viewBox", [0, 0, width, height])
@@ -35,30 +38,28 @@ export default function define(runtime, observer) {
 
                 const leaf = g.selectAll('g')
                     .data(root.leaves())
-                    .join("g")
-                      .attr("transform", d => `translate(${d.x + 1},${d.y + 1})`);
-
-                const tooltip = d3.select('.tooltip');
+                    .enter().append('g')
+                    .attr('transform', `translate(${width / 2}, ${height / 2})`);
 
                 leaf.append("circle")
                     .attr("id", d => (d.leafUid = DOM.uid("leaf")).id)
                     .attr("r", d => d.r)
-                    .attr("fill-opacity", 1)
                     .attr("fill", d => color(d.value))
+
                     .on('mouseover', function (e, d) {
                         tooltip.select('a').attr('href', d.data.url).text(d.data.url);
                         tooltip.select('span').attr('class', d.data.category).text(d.data.category);
                         tooltip.style('visibility', 'visible');
 
-                        d3.select(this).style('stroke', '#222')
-                        .attr("fill-opacity", .7);
+                        d3.select(this).style('stroke', '#ff80ed')
+                        .attr("fill", '#ff80ed');
                     })
                     .on('mousemove', e => tooltip.style('top', `${e.pageY}px`)
                         .style('left', `${e.pageX + 10}px`))
 
                     .on('mouseout', function () {
                         d3.select(this).style('stroke', 'none')
-                       .attr("fill-opacity", 1);
+                       .attr("fill", d => color(d.value))
                         return tooltip.style('visibility', 'hidden');
                     })
 
@@ -79,7 +80,6 @@ export default function define(runtime, observer) {
                     .text(d => `${d.data.value}`);
 
                 simulation.on("tick", () => {
-                    console.log(root.leaves());
                     leaf.attr("transform", d => `translate(${d.x + 1},${d.y + 1})`);
                 });
 

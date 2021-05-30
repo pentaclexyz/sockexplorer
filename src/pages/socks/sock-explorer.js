@@ -19,8 +19,7 @@ export default function SockExplorer() {
     return (
         <main className={"socks"}>
             <dl className={"tooltip"}>
-                <img src={socks} alt="socks badge"/>
-                <div><dt>Owner</dt> <dd className={"name"}></dd></div>
+                <div><dt><img src={socks} alt="socks badge"/></dt> <dd className={"name"}></dd></div>
                 <div><dt>$SOCKS</dt> <dd className={"value"}></dd></div>
                 <div><dt>Bought</dt><dd className={"buy"}></dd></div>
             </dl>

@@ -10,13 +10,19 @@
   visibility: hidden;
   border-radius: 1rem;
   padding: 1rem;
-  word-break: break-word;
   background-color: rgba(29,33,39, .85);
   max-width: 20rem;
   font-size: .7rem;
 
+  .name {
+    width: 10rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
   img {
-    height: 3rem;
+    height: 2.5rem;
     width: auto;
   }
 

@@ -21,7 +21,6 @@ export default function SockExplorer() {
             <dl className={"tooltip"}>
                 <div><dt><img src={socks} alt="socks badge"/></dt> <dd className={"name"}></dd></div>
                 <div><dt>$SOCKS</dt> <dd className={"value"}></dd></div>
-                <div><dt>Bought</dt><dd className={"buy"}></dd></div>
             </dl>
             <div ref={ref}/>
         </main>

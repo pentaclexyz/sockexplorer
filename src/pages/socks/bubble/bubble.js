@@ -9,7 +9,7 @@ export default function define(runtime, observer) {
         .define("chart", ["pack", "data", "d3", "width", "height", "DOM", "color", "invalidation"],
             function (pack, data, d3, width, height, DOM, color, invalidation) {
 
-                const centre = {x: width / 2, y: height / 2};
+                // const centre = {x: width / 2, y: height / 2};
 
                 const root = pack(data);
                 const tooltip = d3.select('.tooltip');

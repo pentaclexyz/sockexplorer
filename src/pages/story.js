@@ -1,7 +1,7 @@
 import React from "react";
 import Layout from "../components/layout";
 import Header from "../components/header";
-import {TwitterTweetEmbed, TwitterTimelineEmbed} from 'react-twitter-embed'
+import {TwitterTweetEmbed} from 'react-twitter-embed'
 
 
 export const Story = () => {
@@ -44,7 +44,7 @@ export const Story = () => {
                             <TwitterTweetEmbed tweetId={"1395496386318290952"}/>
                         </div>
                     </article>
-                    <article className={"box feature box-padding"}>
+                    <article className={"box feature box-padding margin-bottom-5"}>
                         <p className={"feature"}>At the time of writing, 19 $SOCKS remain in the original pool,
                             redeemable for the price of $55k
                             or 35 $ETH</p>

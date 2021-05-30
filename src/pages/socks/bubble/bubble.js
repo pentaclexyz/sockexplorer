@@ -13,7 +13,6 @@ export default function define(runtime, observer) {
 
                 const root = pack(data);
                 const tooltip = d3.select('.tooltip');
-                // root.each((d) => (d.current = d));
 
                 const s1 = 0.001
                 const s2 = 0.9
@@ -31,7 +30,7 @@ export default function define(runtime, observer) {
 
                 const svg = d3.create("svg")
                     .attr("viewBox", [0, 0, width, height])
-                    .style("font-size", ".6rem")
+                    .style("font-size", ".5rem")
                     .attr("text-anchor", "middle");
 
                 const g = svg.append("g");

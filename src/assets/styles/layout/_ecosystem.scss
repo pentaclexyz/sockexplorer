@@ -7,10 +7,17 @@
 
 .tooltip {
   position: absolute;
-  //visibility: hidden;
+  visibility: hidden;
   font-family: sans-serif;
-  max-width: 500px;
-  height: 20rem;
+  border-radius: 1rem;
+  padding: 1rem;
+  word-break: break-word;
+  background-color: rgba(0,0,0, .5);
+  max-width: 12rem;
+
+  a {
+    color: white;
+  }
 }
 
 .tooltip div {
@@ -19,19 +26,12 @@
 
 .socks {
 
-
   circle {
     cursor: pointer;
   }
 
   img {
     width: 200px;
-  }
-
-  a {
-    color: #FFF;
-    font-weight: bold;
-    display: block;
   }
 
   span {

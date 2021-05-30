@@ -18,10 +18,10 @@ export default function SockExplorer() {
     return (
         <main className={"socks"}>
             <div className={"tooltip"}>
-                <div>
                     <a></a>
-                    <span></span>
-                </div>
+                    <div className={"wallet"}></div>
+                    <div className={"value"}></div>
+                    <div className={"buy"}></div>
             </div>
             <div ref={ref}/>
         </main>

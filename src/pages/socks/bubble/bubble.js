@@ -48,6 +48,8 @@ export default function define(runtime, observer) {
                     .on('mouseover', function (e, d) {
                         tooltip.select('a').attr('href', d.data.url).text(d.data.url);
                         tooltip.select('span').attr('class', d.data.wallet).text(d.data.wallet);
+                        tooltip.select('span').attr('class', d.data.value).text(d.data.value);
+                        tooltip.select('span').attr('class', d.data.buydate).text(d.data.buydate);
                         tooltip.style('visibility', 'visible');
 
                         d3.select(this).style('stroke', '#ff80ed')

@@ -4,3 +4,37 @@
     fill: rgba(255,255,255,.65);
   }
 }
+
+.tooltip {
+  position: absolute;
+  visibility: hidden;
+  border-radius: 1rem;
+  padding: 1rem;
+  background-color: rgba(29,33,39, .85);
+  max-width: 20rem;
+  font-size: .7rem;
+
+  .name {
+    width: 10rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  img {
+    height: 2.5rem;
+    width: auto;
+  }
+
+  a {
+    color: white;
+  }
+}
+
+.socks {
+
+  circle {
+    cursor: pointer;
+  }
+
+}

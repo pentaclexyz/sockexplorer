@@ -28,7 +28,7 @@
     "start:sak3": "dotenv -e sak3.env react-scripts start",
     "start:sacks": "dotenv -e sacks.env react-scripts start",
     "start:rhat": "dotenv -e rhat.env react-scripts start",
-    "build": "dotenv -e react-scripts build",
+    "build": "dotenv -e socks.env react-scripts build",
     "build:sak3": "dotenv -e sak3.env react-scripts build",
     "build:sacks": "dotenv -e sacks.env react-scripts build",
     "build:rhat": "dotenv -e rhat.env react-scripts build",

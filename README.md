@@ -1,6 +1,20 @@
 # sockexplorer.org
 
 
+## How to run
+
+- Socks:  `yarn start`
+- Sak3:  `yarn start:sak3`
+- Sacks:  `yarn start:sacks`
+- Rhat:  `yarn start:rhat`
+
+## How to build
+
+- Socks:  `yarn build`
+- Sak3:  `yarn build:sak3`
+- Sacks:  `yarn build:sacks`
+- Rhat:  `yarn build:rhat`
+
 ## Integrations
 
 

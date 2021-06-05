@@ -1,14 +1,14 @@
 import {Runtime, Inspector} from '@observablehq/runtime';
 import React, {useEffect, useRef} from 'react';
 import notebook from './bubble';
-import socks from "../../assets/images/socks-icon-200.png";
 
 export default function SockExplorer() {
     const ref = useRef();
 
     useEffect(() => {
         const runtime = new Runtime();
-        runtime.module(notebook, (name) => {
+        const path = process.env.REACT_APP_JSON;
+        runtime.module(notebook({path}), (name) => {
             if (name === 'chart') {
                 return new Inspector(ref.current);
             }
@@ -19,8 +19,8 @@ export default function SockExplorer() {
     return (
         <main className={"socks"}>
             <dl className={"tooltip"}>
-                <div><dt><img src={socks} alt="socks badge"/></dt> <dd className={"name"}></dd></div>
-                <div><dt>$SOCKS</dt> <dd className={"value"}></dd></div>
+                <div><dt><img src={process.env.REACT_APP_ICON} alt="socks badge"/></dt> <dd className={"name"}></dd></div>
+                {/* <div><dt>${process.env.REACT_APP_NAME.toUpperCase()}</dt> <dd className={"value"}></dd></div> */}
                 <div><dt>First </dt> <dd className={"first"}></dd></div>
                 <div><dt>Latest</dt> <dd className={"latest"}></dd></div>
             </dl>

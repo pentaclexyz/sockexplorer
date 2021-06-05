@@ -1,16 +1,22 @@
-import React, {Component} from "react"
-import {Link} from "react-router-dom";
+import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 class Navigation extends Component {
-    render() {
-        return <nav>
-            <ul className={"nav-content"}>
-                {/*<li><Link to="/">Socks</Link></li>*/}
-                <li><Link to="/story">Sockstory</Link></li>
-                {/*<li><Link to="/data">Data</Link></li>*/}
-            </ul>
+  render() {
+    return (
+      process.env.REACT_APP_NAME === 'socks' && (
+        <nav>
+          <ul className={'nav-content'}>
+            {/*<li><Link to="/">Socks</Link></li>*/}
+            <li>
+              <Link to="/story">Sockstory</Link>
+            </li>
+            {/*<li><Link to="/data">Data</Link></li>*/}
+          </ul>
         </nav>
-    }
+      )
+    );
+  }
 }
 
-export default Navigation
+export default Navigation;

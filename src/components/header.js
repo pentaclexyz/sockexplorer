@@ -6,7 +6,7 @@ class Header extends Component {
     render() {
         return <header>
             <div className="header-content flex-align-center flex-group space-between">
-                <Link className={"logo"} to="/">Sock Explorer</Link>
+                <Link className={"logo"} style={{textTransform: 'capitalize'}} to="/">{process.env.REACT_APP_NAME} Explorer</Link>
                 <Navigation/>
             </div>
         </header>

@@ -1,10 +1,3 @@
-.ecosystem {
-  margin-top: 1.5rem;
-  a {
-    fill: rgba(255,255,255,.65);
-  }
-}
-
 .tooltip {
   position: absolute;
   visibility: hidden;
@@ -27,14 +20,12 @@
   }
 
   a {
-    color: white;
+    fill: rgba(255,255,255,.65);
   }
 }
 
 .socks {
-
   circle {
     cursor: pointer;
   }
-
 }

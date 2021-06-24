@@ -1,4 +1,12 @@
+
 import React, { useEffect } from 'react';
+
+// Example usage: 
+
+// import {data} from "./tweet-data";
+// <div style={{maxWidth: '500px'}}>
+//   <Tweet {...data}  />
+// </div> 
 
 const TwitterPhotos = ({ photos }) => {
   var slideIndex = 1;

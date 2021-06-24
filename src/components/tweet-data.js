@@ -13,7 +13,7 @@ export const data = {
   "language": "en",
   "mentions": [],
   "urls": [],
-  profile_photo: "https://pbs.twimg.com/profile_images/1388414857003692033/vNuunnlr_400x400.jpg",
+  profile_photo: "https://pbs.twimg.com/profile_images/1404007728318607363/3lAeIPxa_400x400.jpg",
   "photos": [
     "https://pbs.twimg.com/media/E2nJO3jVoAE_qFp.png"
   ],

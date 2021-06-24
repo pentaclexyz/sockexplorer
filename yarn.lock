@@ -1434,10 +1434,6 @@
     "@nodelib/fs.scandir" "2.1.4"
     fastq "^1.6.0"
 
-"@observablehq/how-to-embed-a-notebook-in-a-react-app@https://api.observablehq.com/@observablehq/how-to-embed-a-notebook-in-a-react-app.tgz?v=3":
-  version "440.0.0"
-  resolved "https://api.observablehq.com/@observablehq/how-to-embed-a-notebook-in-a-react-app.tgz?v=3#d5ea2a410be0a5c901f16b140243b9641631cdf1"
-
 "@observablehq/inspector@^3.2.2":
   version "3.2.2"
   resolved "https://registry.yarnpkg.com/@observablehq/inspector/-/inspector-3.2.2.tgz#df4e9774e2461836a6e09ff22d79a18a9e77ee11"

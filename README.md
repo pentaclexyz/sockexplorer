@@ -22,11 +22,9 @@
 
 ENS
 
-
 Fleek
 
-
-POAP
+POAP - https://explore.poap.xyz/cry.eth/281237
 
 
 ## Content
